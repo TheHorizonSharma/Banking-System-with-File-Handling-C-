@@ -1,53 +1,58 @@
-This project is a console-based banking management system developed in C++ that provides essential banking functionalities with secure storage and efficient transaction handling. It is designed using structured programming principles and demonstrates practical use of binary and text file handling, password security, and menu-driven interaction.
+# Console-Based Banking Management System (C++)
 
-The system offers two main operation modes — Admin Mode and User Mode — each with distinct permissions and features.
+This project is a console-based banking management system built entirely in C++, designed to simulate basic banking operations while demonstrating core programming concepts like file handling, data security, and structured code organization.
 
-Admin Mode allows the administrator to:
+## Overview
+The system supports two operation modes — **Admin** and **User** — each with separate menus and permissions to ensure secure and role-specific access.
 
-Create new accounts with unique account numbers.
+### Admin Mode
+Allows full management of bank accounts, including:
+- Creating new accounts (auto-generated unique account numbers)
+- Depositing and withdrawing funds
+- Checking balances
+- Updating account information
+- Viewing transaction history
+- Displaying all registered accounts
+- Closing accounts
 
-Store account details securely in a binary file (Userinfo.dat).
+### User Mode
+Provides account holders with secure access to:
+- View balances
+- Check transaction history
+- Close accounts (after password verification)
 
-Deposit and withdraw funds.
+## Data Storage & Security
+- **Binary File**: All user details are stored in `Userinfo.dat` for security and efficiency.
+- **Password Hashing**: Only hashed passwords are stored; no plain text.
+- **Text Logs**: Transactions are recorded in `Transactions.txt` for human-readable auditing.
 
-Check account balances.
+## Transactions
+- Supports deposits and withdrawals
+- Records:
+  - Transaction type
+  - Amount
+  - Resulting balance
 
-Update account information (name, phone number, password, or all).
+## Account Updates
+Admins can:
+- Update name, phone number, or password individually
+- Update all fields at once
 
-View complete transaction history.
+## Account Closure
+- Removes user data from the binary file
+- Deletes related transaction records from the text file
 
-Display all registered accounts.
+## Technical Highlights
+- Struct-based design for account representation
+- Password hashing for basic security
+- Binary I/O for secure and compact storage
+- Text file handling for clear transaction records
+- Menu-driven programming for smooth interaction
+- Persistent storage across sessions
 
-Close accounts and delete related transactions.
+---
 
-User Mode enables customers to:
-
-Log in securely using their account number and password.
-
-Check their current balance.
-
-View personal transaction history.
-
-Close their account if desired.
-
-When creating an account, the system generates a unique account number and stores details in binary format for security. Passwords are hashed before storage, ensuring they are never saved in plain text.
-
-Every deposit and withdrawal is logged in a text file (Transactions.txt), recording the account number, transaction type, amount, and updated balance. This allows for transparent tracking of all financial activities.
-
-Updating account information is flexible, allowing modification of specific fields or all details at once. Closing an account securely removes the record from the binary file and deletes any associated transaction history.
-
-The system combines binary file storage for sensitive data with text logs for transaction history, balancing security and accessibility.
-
-Key Features & Concepts:
-
-Struct-based account representation.
-
-Binary file handling for secure data storage.
-
-Text file logging for transaction records.
-
-Password hashing for enhanced security.
-
-Menu-driven interface for ease of use.
-
-Persistent storage for data across sessions.
+## How to Run
+1. Compile:
+   ```bash
+   g++ main.cpp -o banking
