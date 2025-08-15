@@ -39,3 +39,22 @@
 
 # debug information files
 *.dwo
+# Compiled object files
+*.o
+*.obj
+
+# Compiled executable files
+*.exe
+*.out
+*.app
+
+# Debug files
+*.pdb
+
+# Binary data files
+Userinfo.dat
+Transactions.txt
+
+# Other system files
+.DS_Store
+Thumbs.db
