@@ -16,6 +16,7 @@
 
 # Debugger Files
 *.pdb
+*.dwo
 
 # Compiled Dynamic libraries
 *.so
@@ -37,23 +38,13 @@
 *.out
 *.app
 
-# debug information files
-*.dwo
-# Compiled object files
-*.o
-*.obj
-
-# Compiled executable files
-*.exe
-*.out
-*.app
-
-# Debug files
-*.pdb
-
-# Binary data files
+# Binary data files (project-specific)
 Userinfo.dat
 Transactions.txt
+
+# Build directories
+/build/
+/bin/
 
 # Other system files
 .DS_Store
